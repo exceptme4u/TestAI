@@ -107,8 +107,8 @@ def download_models(default_model, previous_default_models, checkpoint_downloads
         load_file_from_url(url=url, model_dir=config.path_vae_approx, file_name=file_name)
 
     load_file_from_url(
-        url='https://huggingface.co/lllyasviel/misc/resolve/main/fooocus_expansion.bin',
-        model_dir=config.path_fooocus_expansion,
+        url='https://huggingface.co/lllyasviel/misc/resolve/main/TestAi_expansion.bin',
+        model_dir=config.path_TestAi_expansion,
         file_name='pytorch_model.bin'
     )
 
@@ -121,7 +121,7 @@ def download_models(default_model, previous_default_models, checkpoint_downloads
             for alternative_model_name in previous_default_models:
                 if os.path.isfile(get_file_from_folder_list(alternative_model_name, config.paths_checkpoints)):
                     print(f'You do not have [{default_model}] but you have [{alternative_model_name}].')
-                    print(f'Fooocus will use [{alternative_model_name}] to avoid downloading new models, '
+                    print(f'TestAi will use [{alternative_model_name}] to avoid downloading new models, '
                           f'but you are not using the latest models.')
                     print('Use --always-download-new-model to avoid fallback and always get new models.')
                     checkpoint_downloads = {}
